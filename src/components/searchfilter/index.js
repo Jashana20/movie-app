@@ -32,6 +32,7 @@ export default class SearchFilters extends React.Component {
 
 const FiltersWrapper = styled.div`
   position: relative;
+  left: 750px;
 `;
 
 const SearchFiltersCont = styled.div`
@@ -39,6 +40,7 @@ const SearchFiltersCont = styled.div`
   padding: 20px;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
+  width: 300px;
 
   ${(props) =>
     props.marginBottom &&

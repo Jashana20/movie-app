@@ -11,7 +11,7 @@ export default class MovieList extends React.Component {
       <MoviesWrapper>
         {/* Finish the MovieItem component and use it here to display the movie results */}
         {movies.map((movie) => (
-          <MovieItem key={movie.id} movie={movie} />
+          <MovieItem key={movie.id} movie={movie} genres={genres} />
         ))}
       </MoviesWrapper>
     );

@@ -20,7 +20,6 @@ export default class CheckBox extends React.Component {
     return (
       <CheckboxCont>
         <div>
-          <i className="window minimize outline icon" />
           <h3 onClick={toggleGenreFilters}>Select genre(s)</h3>
           {genreFiltersShown
             ? genres.map((genre) => {

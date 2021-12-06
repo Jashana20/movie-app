@@ -6,7 +6,6 @@ import * as fetcher from "../../fetcher";
 
 import SearchFilters from "../../components/searchfilter";
 import MovieList from "../../components/movielist";
-// import axios from "axios";
 import { genres } from "../../fetcher";
 
 export default class Discover extends React.Component {
@@ -14,8 +13,8 @@ export default class Discover extends React.Component {
     super(props);
 
     this.state = {
-      keyword: "",
-      year: 0,
+      // keyword:
+      // year: 0,
       results: [],
       totalCount: 0,
       genreOptions: [],
@@ -45,13 +44,6 @@ export default class Discover extends React.Component {
   // Write a function to trigger the API request and load the search results based on the keyword and year given as parameters
 
   componentDidMount() {
-    // axios
-    //   .get(
-    //     "https://api.themoviedb.org/3/genre/movie/list?api_key=2e94837f1fc6f95b4f41a102b88e01c7&language=en-US"
-    //   )
-    //   .then((res) => {
-    //     this.setState({ genreOptions: res.data.genres });
-    //   });
     const search = async () => {
       await genres.get("/genre/movie/list").then((res) => {
         this.setState({ genreOptions: res.data.genres });
@@ -78,7 +70,7 @@ export default class Discover extends React.Component {
             genres={genreOptions}
             ratings={ratingOptions}
             languages={languageOptions}
-            searchMovies={(keyword, year) => this.searchMovies(keyword, year)}
+            // searchMovies={(keyword, year) => this.searchMovies(keyword, year)}
             setAllMovies={this.setAllMovies}
           />
         </MovieFilters>
